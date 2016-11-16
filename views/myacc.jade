@@ -25,13 +25,7 @@ block content
 	.play-card.effect7
 		div(class="remove-float center-block text-center")
 			h1 Partidas ganadas
-			h3 #{user.gw} de #{user.gl}
-			| 
-			h3 Efectividad
-				h1#porcentaje
-			//canvas(id='stats' width='600', height='400')
-	script(src='/javascripts/stats.js', type='text/javascript')
-	script(src='https://code.jquery.com/jquery-1.10.2.js')
+			h3 #{user.gw} de #{user.gl} 
 	script.
 		console.log ("----"+'#{user.gw}'+"-/-"+'#{user.gw}');
 		console.log ("----"+document.getElementById("user.gw") );
@@ -41,10 +35,6 @@ block content
 		var resul = 0;
 		a = a+'#{user.gw}';
 		b = b+'#{user.gl}';
+		console.log ("----a: "+ a );
+		console.log ("----b: "+ b );
 		console.log ("----a + b: "+ (a+b) );
-		if ((a+b)>0){
-			resul = '#{user.gw}' / '#{user.gl}';
-		else{
-			result = " - ";
-		console.log ("----"+resul);
-		document.getElementById("porcentaje").innerHTML = resul;
