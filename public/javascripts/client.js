@@ -214,7 +214,7 @@ $(document).ready(function(){
 		}
 		misTR.html(transitions + "");
 		okplayCard= false;
-		if (accion=="mazo") {   okplayCard= true;  };
+		if (accion=="mazo") {   okplayCard= true;   console.log("////////////////////////////// mazo true ");};
 		if (accion=="quiero") {   okplayCard= true;  };
 		if (accion=="no-quiero") {  okplayCard = true;   };
 		if (accion=="playcard") { okplayCard =true;   };
