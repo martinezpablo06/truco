@@ -467,7 +467,7 @@ $(document).ready(function(){
 //-----------------------------------------------------------------------------------------
 // Manejo de desconexión de un usuario.
 	socket.on('game_crash', function(username) {
-		notifyUser("El oponente "+ username + " se ha ido.");
+		notifyUser(username + " se ha ido.");
 		misCartas.empty();
 	});
 //-----------------------------------------------------------------------------------------
