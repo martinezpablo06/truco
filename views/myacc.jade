@@ -24,7 +24,19 @@ block content
 		br
 	.play-card.effect7
 		div(class="remove-float center-block text-center")
-			h1 Tus estadisticas
-			canvas(id='stats' width='600', height='400')			
+			h1 Partidas ganadas
+			p
+				h2 #{user.gw}
+				h3 de #{user.gl}
+			| 
+			p
+				h3 Efectividad
+				h1#porcentaje
+			//canvas(id='stats' width='600', height='400')
 	script(src='/javascripts/stats.js', type='text/javascript')
 	script(src='https://code.jquery.com/jquery-1.10.2.js')
+	script.
+		var porcentaje = '#{user.gw}' / '#{user.gl}';
+		console.log ("----"+'#{user.gw}'+"-/-"+'#{user.gw}');
+		console.log ("----"+porcentaje);
+		document.getElementById("porcentaje").innerHTML = resul;
