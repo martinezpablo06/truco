@@ -37,7 +37,7 @@ $(document).ready(function(){
 	var other;
 	var miGame;
 	var idopo;    
-	var turno;
+	var turno = "ninguno";
 	var cartaSelect;
 //-----------------------------------------------------------------------------------------
 // Variables encargadas de la mesa del juego, en cuanto a sus botone y muestras de turnos.
@@ -156,13 +156,16 @@ $(document).ready(function(){
 					if (indice == 1){ carta2.html(""); }
 					if (indice == 2){ carta3.html(""); }
 					socket.emit("jugando",miGame,me,sacc,idopo, aux);
+					turno = "ninguno";
 					sacc="none";
+					
 				}else{
 					notifyUser("No es tu turno.");
 				}
 			}else{
 				if(me.username == turno){
 					socket.emit("jugando",miGame,me,sacc,idopo);
+					turno = "ninguno";
 					if (sacc=="truco") {   f_t = true;  };
 					if (sacc=="retruco") {  f_rt = true;   };
 					if (sacc=="valecuatro") {f_v4 =true;   };
